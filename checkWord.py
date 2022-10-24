@@ -2,7 +2,7 @@ from uzwords import words
 from difflib import get_close_matches
 
 def checkWord(word, words=words):
-    word.lower()
+    word = word.lower()
     matches = set(get_close_matches(word, words))
     avairable = False
     if word in matches:
@@ -18,5 +18,5 @@ def checkWord(word, words=words):
     return {'avairable':avairable, 'matches':matches}
 
 if __name__ == '__main__':
-    print(checkWord(' покиза '))
+    print(checkWord('Покиза'))
     print(checkWord('ҳусан'))
