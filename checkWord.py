@@ -2,8 +2,6 @@ from uzwords import words
 from difflib import get_close_matches
 
 def checkWord(word, words=words):
-    if word[0] == ' ' or word[-1] == ' ':
-        word = word.replace(' ', '')
     word.lower()
     matches = set(get_close_matches(word, words))
     avairable = False
